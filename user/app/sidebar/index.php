@@ -82,9 +82,8 @@
           <div class="slim-pageheader">
             <ol class="breadcrumb slim-breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Rohseite</li>
             </ol>
-            <h6 class="slim-pagetitle">Rohseite</h6>
+            <h6 class="slim-pagetitle">Dashboard</h6>
           </div><!-- slim-pageheader -->
 
         </div><!-- container -->
