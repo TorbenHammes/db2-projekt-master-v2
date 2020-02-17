@@ -1,3 +1,9 @@
+<?php
+//Step1
+ $db = mysqli_connect('localhost','master-projekt-db2','Xj41t^h3','master-projekt-db2')
+ or die('Error connecting to MySQL server.');
+?>
+
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -82,6 +88,14 @@
           </div><!-- slim-pageheader -->
 
         </div><!-- container -->
+
+        <div><p>
+          <?php 
+            $query = "SELECT PLZ, Ort FROM TBL_Ort";
+            mysqli_query($db, $query) or die('Error querying database.');
+          ?>
+          </p>
+        </div>
 
         <div class="slim-footer mg-t-0">
           <div class="container-fluid">
