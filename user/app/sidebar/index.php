@@ -91,8 +91,16 @@
 
         <div><p>
           <?php 
-            $query = "SELECT PLZ, Ort FROM TBL_Ort";
+            $query = "SELECT * FROM TBL_Ort";
             mysqli_query($db, $query) or die('Error querying database.');
+            
+            
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_array($result);
+
+            while ($row = mysqli_fetch_array($result)) {
+            echo $row['PLZ'] . ' ' . $row['Ort'] .'<br />';
+}
           ?>
           </p>
         </div>
