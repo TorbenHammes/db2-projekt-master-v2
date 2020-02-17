@@ -1,0 +1,8 @@
+ErrorDocument 404 404.html
+ErrorDocument 500 500.html
+ErrorDocument 503 503.html
+ErrorDocument 505 505.html
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^projekt-db2\.creative-media.agency\.agency$ [NC]
+RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
