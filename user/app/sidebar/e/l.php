@@ -138,6 +138,7 @@ if ($result = $dblink->query($sql)) {
                             }).addTo(mymap);
 
                             var marker = L.marker([x , y]).addTo(mymap);
+
                         </script>
                     </div>
                 </div>
@@ -145,13 +146,11 @@ if ($result = $dblink->query($sql)) {
         </div>
         <div>
             <div class="section-wrapper">
-                <label class="section-title"><?php print_r ($plz) ;?></label>
+                <label class="section-title">Details</label>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($beschr); ?></p>
-                        <hr>
-                        <h5 class="card-title tx-dark tx-medium mg-b-10"><?php printf($preisf); ?></h5>
-                        <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
+                        <p class="mg-b-20 mg-sm-b-40"><strong>Adresse: </strong><?php print_r($str . ' ' . $hnr); ?></p>
+                        <p class="card-subtitle tx-normal mg-b-15"><strong>Ort: </strong><?php print_r($plz . ' '); ?> Ort fehlt noch</p>
                         <hr>
                         <a href="./s.php?seller=<?php print_r($nickname); ?>">
                             <button class="btn btn-outline-primary btn-block mg-b-10" type="button" onclick=“window.location.href=‘<?php printf($nickname); ?>‘ “>
@@ -160,7 +159,11 @@ if ($result = $dblink->query($sql)) {
                         </a>
                     </div><!-- col -->
                     <div class="col-sm-12 col-md-6 container-fluid">
-                        <img src="<?php print_r($bild); ?>" class="img-fluid" alt="Produktbild">
+                        <a href="./s.php?seller=<?php print_r($nickname); ?>">
+                            <button class="btn btn-outline-primary btn-block mg-b-10" type="button" onclick=“window.location.href=‘./s.php?seller=<?php print_r($nickname); ?>‘ “>
+                                <h5 class="card-title tx-dark tx-medium mg-b-10">Verkäufer: <?php print_r($nickname); ?></h5>
+                            </button>
+                        </a>
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- section-wrapper -->
