@@ -94,7 +94,7 @@ if ($result = $dblink->query($sql)) {
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Support</li>
           </ol>
-          <h6 class="slim-pagetitle">Standort von <?php echo ( string $nickname );?></h6>
+          <h6 class="slim-pagetitle">Standort von <?php echo ( $nickname );?></h6>
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper">
