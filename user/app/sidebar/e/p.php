@@ -103,13 +103,18 @@ if ($result = $dblink->query($sql)) {
             <div class="section-wrapper">
                 <label class="section-title"><?php print_r($pname); ?></label>
                 <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
-                    </div><!-- col -->
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r ($beschr) ;?></p>
                     </div><!-- col -->
+                    <div class="col-sm-12 col-md-6">
+                        <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
+                    </div><!-- col -->
                 </div><!-- row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        
+                    </div>
+                </div>
             </div><!-- section-wrapper -->
         </div>
 
