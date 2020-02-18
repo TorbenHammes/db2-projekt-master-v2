@@ -84,7 +84,7 @@
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             </ol>
             <h6 class="slim-pagetitle">Produktliste</h6>
-          </div><!-- slim-pageheader -->
+          </div><!-- slim-pageheader --> 
 
         </div><!-- container -->
 
@@ -103,12 +103,6 @@
                     </div>
                     <div class="user-btn-wrapper">
                       <a href="#" class="btn btn-outline-light btn-icon">
-                        <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                      </a>
-                      <a href="#" class="btn btn-outline-light btn-icon">
-                        <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                      </a>
-                      <a href="#" class="btn btn-outline-light btn-icon">
                         <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
                       </a>
                     </div>
@@ -120,12 +114,6 @@
                       <span>Standort</span>
                     </div>
                     <div class="user-btn-wrapper">
-                      <a href="#" class="btn btn-outline-light btn-icon">
-                        <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                      </a>
-                      <a href="#" class="btn btn-outline-light btn-icon">
-                        <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                      </a>
                       <a href="#" class="btn btn-outline-light btn-icon">
                         <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
                       </a>
