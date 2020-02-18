@@ -13,9 +13,9 @@ if ($result = $dblink->query($sql)) {
     $strasse = $row[5];
     $tel = $row[6];
 };
-
-$db = "select E-Mail from TBL_V_Zugang, TBL_Verkaufer where TBL_V_Zugang.Nickname = TBL_Verkaufer.Nickname = $nickname";
-$nicknamemail = $dblink->query($db);
+//
+//$db = "select E-Mail from TBL_V_Zugang, TBL_Verkaufer where TBL_V_Zugang.Nickname = TBL_Verkaufer.Nickname = $nickname";
+//$nicknamemail = $dblink->query($db);
 
 ?>
 <!DOCTYPE html>
