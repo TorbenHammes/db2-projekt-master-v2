@@ -20,7 +20,7 @@ $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projek
     <link href="../../lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
 
     <!-- Slim CSS -->
-    <link rel="stylesheet" href="../css/slim.css">
+    <link rel="stylesheet" href="../../css/slim.css">
 
   </head>
   <body>
@@ -28,7 +28,7 @@ $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projek
     <div class="slim-header with-sidebar">
       <div class="container-fluid">
         <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="index.html">Logo<span>.</span></a></h2>
+          <h2 class="slim-logo"><a href="../index.html">Logo<span>.</span></a></h2>
           <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
           <div class="search-box">
             <input type="text" class="form-control" placeholder="Suche">
