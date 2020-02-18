@@ -31,7 +31,7 @@
     <div class="slim-header with-sidebar">
       <div class="container-fluid">
         <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="index.html">Logo<span>.</span></a></h2>
+          <h2 class="slim-logo"><a href="index.php">Logo<span>.</span></a></h2>
           <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
           <div class="search-box">
             <input type="text" class="form-control" placeholder="Suche">
@@ -61,7 +61,7 @@
 
         <ul class="nav nav-sidebar">
           <li class="sidebar-nav-item">
-            <a href="index.html" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
+            <a href="index.php" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
           <li class="sidebar-nav-item">
             <a href="map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
           </li>
@@ -81,7 +81,7 @@
         <div class="container">
           <div class="slim-pageheader">
             <ol class="breadcrumb slim-breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             </ol>
             <h6 class="slim-pagetitle">Dashboard</h6>
           </div><!-- slim-pageheader -->
