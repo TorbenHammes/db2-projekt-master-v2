@@ -91,31 +91,29 @@
                 <div class="col-lg-12">
                     <div class="list-group list-group-user">
                         <?php
-                        $db = mysqli_connect('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2')
-                        or die('Error connecting to MySQL server.');
 
-                        $query = "SELECT * FROM TBL_Verkaeufer_Produkt";
-                        mysqli_query($db, $query) or die('Error querying database.');
+                        $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
+                        $sql="select * from TBL_Verkaeufer_Produkt";
+                        if ($result= $dblink->query($sql)) {
+                            while ($row=$result->fetch_row()) {
+                                print '<div class="list-group-item">
+                                <img src="http://via.placeholder.com/500x500" alt="">
+                                <div class="user-name-address">
+                                <p> $row[3] </p>
+                                <span> $row[5] </span>
+                                </div>
+                                <div class="user-btn-wrapper">
+                                <a href="#" class="btn btn-outline-light btn-icon">
+                                <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
+                                </a>
+                                </div>
+                                </div>\n';
+                            }
 
-                        $result = mysqli_query($db, $query);
-                        $row = mysqli_fetch_array($result);
-
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo '<div class=\"list-group-item\">';
-                            echo '<img src="http://via.placeholder.com/500x500" alt="">'
-                            echo '<div class="user-name-address">';
-                            echo '<p>' . $row['Produktname'] . '</p>';
-                            echo '<span>' . $row['Kategorie'] . '</span>';
-                            echo '</div>';
-                            echo '<div class="user-btn-wrapper">';
-                            echo '<a href="#" class="btn btn-outline-light btn-icon">';
-                            echo '<div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>';
-                            echo '</a>';
-                            echo '</div>';
-                            echo '</div>';
-                        }
+                        } else {print "SQL scheint falsch zu sein";}
                         ?>
+
                         <div class="list-group-item">
                             <img src="http://via.placeholder.com/500x500" alt="">
                             <div class="user-name-address">
