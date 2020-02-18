@@ -23,7 +23,7 @@ if ($result = $dblink->query($sql)) {
     <meta name="description" content="Regio Karte">
     <meta name="author" content="TorbenHammes">
 
-    <title>Support | Regio Karte</title>
+    <title>Standort | Regio Karte</title>
 
     <!-- vendor css -->
     <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">

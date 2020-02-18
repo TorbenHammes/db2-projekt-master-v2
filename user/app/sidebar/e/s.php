@@ -11,7 +11,7 @@ if ($result = $dblink->query($sql)) {
     $nr = $row[4];
     $strasse = $row[5];
     $tel = $row[6];
-};
+}
 //
 //$db = "select E-Mail from TBL_V_Zugang, TBL_Verkaufer where TBL_V_Zugang.Nickname = TBL_Verkaufer.Nickname = $nickname";
 //$nicknamemail = $dblink->query($db);
@@ -109,12 +109,11 @@ if ($result = $dblink->query($sql)) {
                 <label class="section-title"><?php print_r($v); ?></label>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($nicknamemail); ?></p>
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($v); ?></p>
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($strasse); ?></p>
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($vname); ?></p>
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($nname); ?></p>
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($tel); ?></p>
+                        <p><?php print_r($strasse); ?></p>
+                        <p><?php print_r($vname); ?></p>
+                        <p><?php print_r($nname); ?></p>
+                        <p><?php print_r($tel); ?></p>
                         <hr>
                         <h5 class="card-title tx-dark tx-medium mg-b-10"><?php printf($preisf); ?></h5>
                         <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
