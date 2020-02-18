@@ -94,6 +94,8 @@
 
                         $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
+                        $kategorie="select Art from TBL_Kategorie_Location, TBL_Locations where TBL_Kategorie_Location.L_K_ID = TBL_Locations.L_K_ID";
+
                         $sql="select * from TBL_Locations";
                         if ($result= $dblink->query($sql)) {
                             while ($row=$result->fetch_row()) {
@@ -113,8 +115,6 @@
 
                         } else {print "SQL scheint falsch zu sein";}
 
-                        $kategorie="select Art from TBL_Locations, TBL_Kategorie_Location where TBL_Locations.L_K_ID = TBL_Kategorie_Location.L_K_ID";
-                        
                         ?>
 
                         <div class="list-group-item">
