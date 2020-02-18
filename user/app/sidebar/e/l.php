@@ -121,10 +121,10 @@ if ($result = $dblink->query($sql)) {
                 <p class="mg-b-20 mg-sm-b-40">Hier findest du den Standort auf der Karte.</p>
                 <div class="row">
                     <div class="col">
-                        <div id="leaflet-<?php print_r ($plz) ;?>" style="height=200px;" class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
+                        <div id="leaflet-<?php print_r ($lid) ;?>" style="height=200px;" class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
                         <script>
-                            var mymap = L.map('leaflet-<?php print_r ($plz) ;?>').setView([52.408, 12.779], 10);
-                            /*var mymap = L.map('leaflet-<?php print_r ($plz) ;?>').setView([<?php //print_r ($x); ?>, <?php //print_r ($y); ?>], 13);*/
+                            var mymap = L.map('leaflet-<?php print_r ($lid) ;?>').setView([52.408, 12.779], 10);
+                            
                             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                                 maxZoom: 18,
@@ -133,6 +133,8 @@ if ($result = $dblink->query($sql)) {
                                 zoomOffset: -1,
                                 accessToken: 'pk.eyJ1IjoiaGFtbWVzbWVkaWEiLCJhIjoiY2s2c2dwYWc4MGZlZjNubnZreTB5d3F3ZiJ9.ipG2uTSEaTRPNovKrJYRmQ'
                             }).addTo(mymap);
+
+                            var marker = L.marker(<?php print_r ($x); ?>, , <?php print_r ($y); ?>]).addTo(<?php print_r ($lid) ;?>);
                         </script>
                     </div>
                 </div>
