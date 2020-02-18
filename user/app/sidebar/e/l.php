@@ -151,12 +151,6 @@ if ($result = $dblink->query($sql)) {
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
                         <p class="mg-b-20 mg-sm-b-40"><strong>Adresse: </strong><?php print_r($str . ' ' . $hnr); ?></p>
                         <p class="card-subtitle tx-normal mg-b-15"><strong>Ort: </strong><?php print_r($plz . ' '); ?> Ort fehlt noch</p>
-                        <hr>
-                        <a href="./s.php?seller=<?php print_r($nickname); ?>">
-                            <button class="btn btn-outline-primary btn-block mg-b-10" type="button" onclick=“window.location.href=‘<?php printf($nickname); ?>‘ “>
-                                <h5 class="card-title tx-dark tx-medium mg-b-10">Verkäufer: <?php print_r($nickname); ?></h5>
-                            </button>
-                        </a>
                     </div><!-- col -->
                     <div class="col-sm-12 col-md-6 container-fluid">
                         <a href="./s.php?seller=<?php print_r($nickname); ?>">
