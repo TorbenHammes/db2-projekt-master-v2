@@ -116,7 +116,7 @@ setlocale(LC_MONETARY, 'de_DE');
                                 </div>
                             </div><!-- card -->
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3 container-fluid">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title tx-dark tx-medium mg-b-10"><a href=""><?  print_r($nickname) ;?></a></h5>
@@ -125,7 +125,7 @@ setlocale(LC_MONETARY, 'de_DE');
                             </div><!-- card -->
                         </div>
                     </div><!-- col -->
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-6 container-fluid">
                         <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
                     </div><!-- col -->
                 </div><!-- row -->
