@@ -123,8 +123,11 @@ if ($result = $dblink->query($sql)) {
                     <div class="col">
                         <div id="leaflet-<?php print_r ($lid) ;?>" style="height=200px;" class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
                         <script>
-                            var mymap = L.map('leaflet-<?php print_r ($lid) ;?>').setView([52.408, 12.779], 10);
+                            var x='<?php print_r ($x); ?>';
+                            var y='<?php print_r ($y); ?>';
+                            var lid='<?php print_r ($lid); ?>'
 
+                            var mymap = L.map('leaflet-', lid).setView([52.408, 12.779], 10);
                             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                                 maxZoom: 18,
@@ -134,11 +137,7 @@ if ($result = $dblink->query($sql)) {
                                 accessToken: 'pk.eyJ1IjoiaGFtbWVzbWVkaWEiLCJhIjoiY2s2c2dwYWc4MGZlZjNubnZreTB5d3F3ZiJ9.ipG2uTSEaTRPNovKrJYRmQ'
                             }).addTo(mymap);
 
-                            var x='<?php print_r ($x); ?>';
-                            var y='<?php print_r ($y); ?>';
-                            var
-
-                            var marker = L.marker(<?php print_r ($x); ?>, , <?php print_r ($y); ?>]).addTo(mymap);
+                            var marker = L.marker([x , y]).addTo(mymap);
                         </script>
                     </div>
                 </div>
