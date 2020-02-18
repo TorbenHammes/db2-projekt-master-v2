@@ -14,7 +14,6 @@ if ($result = $dblink->query($sql)) {
 
 setlocale(LC_MONETARY, 'de_DE');
 
-(int)$preis
 ?>
 <!DOCTYPE html>
 <html lang="de">
