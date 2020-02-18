@@ -26,12 +26,12 @@ if ($result = $dblink->query($sql)) {
     <title>Support | Regio Karte</title>
 
     <!-- vendor css -->
-    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="../lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../../lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
 
     <!-- Slim CSS -->
-    <link rel="stylesheet" href="../css/slim.css">
+    <link rel="stylesheet" href="../../css/slim.css">
 
   </head>
   <body>
