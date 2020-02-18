@@ -97,35 +97,8 @@ or die('Error connecting to MySQL server.');
                 <div class="col-lg-12">
                     <div class="list-group list-group-user">
                         <?php
-                        $count = "SELECT COUNT * FROM TBL_Ort";
-                        mysqli_query($db, $count) or die('Error querying database.');
 
-                        $result_count = mysqli_query($db, $count);
-
-                        while (i < $result_count) {
-
-                            $prod = mysqli_query($db, "SELECT Ort FROM TBL_Ort WHERE (ROW_NUMBER() OVER (ORDER BY Ort)) = i");
-                            $plz = mysqli_query($db, "SELECT PLZ FROM TBL_Ort");}
-
-                      echo '<div class="list-group - item">';
-                      echo '<img src="http://via.placeholder.com/500x500" alt="">';?>
-
-                        <?php
-                        $query1 = "SELECT * FROM TBL_Ort";
-                        mysqli_query($db, $query1) or die('Error querying database.');
-
-
-                        $result = mysqli_query($db, $query1);
-                        $row = mysqli_fetch_array($result);
-
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo $row['PLZ'] . ' ' . $row['Ort'] .'<br />';
-                        }
-                        ?>
-
-                        <?php
-
-                        $sql = "SELECT * FROM TBL_Verkäufer_Produkt";
+                        $sql = "SELECT * FROM TBL_Verkaeufer_Produkt";
                         foreach ($db->query($sql) as $row) {
                             echo '<div class=\"list-group-item\">';
                             echo '<img src="http://via.placeholder.com/500x500" alt="">'
@@ -141,18 +114,6 @@ or die('Error connecting to MySQL server.');
                             echo '</div><!-- list-group-item -->';
                         }
                         ?>
-
-                      <div class="user-name-address">
-                      <p><?=$prod?></p>
-                      <span><?=$plz?></span>
-                      </div>
-                      <div class="user - btn - wrapper">
-                          <a href="#" class="btn btn-outline-light btn-icon">
-                      <div class="tx - 20"><i class="icon ion - android - more - vertical"></i></div>
-                      </a>
-                       </div>
-                       </div><!-- list-group-item -->
-
                         <div class="list-group-item">
                             <img src="http://via.placeholder.com/500x500" alt="">
                             <div class="user-name-address">
