@@ -108,21 +108,19 @@ or die('Error connecting to MySQL server.');
                             $plz = mysqli_query($db, "SELECT PLZ FROM TBL_Ort");
 
                       echo "<div class="list-group - item">";
-                      echo "<img src="http://via.placeholder.com/500x500" alt="">";
+                      echo "<img src="http://via.placeholder.com/500x500" alt="">";?>
 
 
-                      //echo "<div class="user-name-address">";
-                      echo "<p>'$prod'</p>";
-                      echo "<span>$plz</span>";
-                      echo "</div>";
-                      echo "<div class="user - btn - wrapper">";
-                      echo "<a href="#" class="btn btn-outline-light btn-icon">";
-                      echo "<div class="tx - 20"><i class="icon ion - android - more - vertical"></i></div>";
-                      echo "</a>";
-                      echo "</div>";
-                      echo "</div><!-- list-group-item -->";
-                        }
-                        ?>
+                      <div class="user-name-address">
+                      <p><?=$prod?></p>
+                      <span><?=$plz?></span>
+                      </div>
+                      <div class="user - btn - wrapper">
+                          <a href="#" class="btn btn-outline-light btn-icon">
+                      <div class="tx - 20"><i class="icon ion - android - more - vertical"></i></div>
+                      </a>
+                       </div>
+                       </div><!-- list-group-item -->
 
                         <div class="list-group-item">
                             <img src="http://via.placeholder.com/500x500" alt="">
