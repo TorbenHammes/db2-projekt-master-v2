@@ -84,7 +84,47 @@
         </div><!-- container -->
 
         <div class="section-wrapper mg-t-20">
-            <label class="section-title">Standorte</label>
+            <label class="section-title">Karte</label>
+            <p class="mg-b-20 mg-sm-b-40">Auf der Karte siehst du alle Standorte.</p>
+            <div>
+                <div class="col">
+                    <div id="leaflet-<?php print_r($lid); ?>" style="height=200px;"
+                         class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
+                    <script>
+                        var x = '<?php print_r($x); ?>';
+                        var y = '<?php print_r($y); ?>';
+                        var lid = '<?php print_r($lid); ?>'
+
+                        var mymap = L.map('leaflet-', lid).setView([52.408, 12.779], 10);
+                        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                            maxZoom: 18,
+                            id: 'mapbox/streets-v11',
+                            tileSize: 512,
+                            zoomOffset: -1,
+                            accessToken: 'pk.eyJ1IjoiaGFtbWVzbWVkaWEiLCJhIjoiY2s2c2dwYWc4MGZlZjNubnZreTB5d3F3ZiJ9.ipG2uTSEaTRPNovKrJYRmQ'
+                        }).addTo(mymap);
+
+                        var marker = L.marker([x, y]).addTo(mymap);
+
+                    </script>
+                </div>
+            </div>
+        </div><!-- section-wrapper -->
+    </div>
+    <div class="slim-mainpanel">
+        <div class="container">
+            <div class="slim-pageheader">
+                <ol class="breadcrumb slim-breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                </ol>
+                <h6 class="slim-pagetitle">Standorte</h6>
+            </div><!-- slim-pageheader -->
+
+        </div><!-- container -->
+
+        <div class="section-wrapper mg-t-20">
+            <label class="section-title">Standortliste</label>
             <p class="mg-b-20 mg-sm-b-40">Hier sind alle Standorte in der Nähe.</p>
 
             <div class="row">
@@ -92,11 +132,11 @@
                     <div class="list-group list-group-user">
                         <?php
 
-                        $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+                        $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
-                        $sql="select * from TBL_Locations";
-                        if ($result= $dblink->query($sql)) {
-                            while ($row=$result->fetch_row()) {
+                        $sql = "select * from TBL_Locations";
+                        if ($result = $dblink->query($sql)) {
+                            while ($row = $result->fetch_row()) {
                                 print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
                                 <div class=\"user-name-address\">
@@ -111,7 +151,46 @@
                                 </div>";
                             }
 
-                        } else {print "SQL scheint falsch zu sein";}
+                        } else {
+                            print "SQL scheint falsch zu sein";
+                        }
+
+                        ?>
+                    </div><!-- list-group -->
+                </div><!-- col-6 -->
+            </div><!-- section-wrapper -->
+        </div>
+        <div class="section-wrapper mg-t-20">
+            <label class="section-title">Standorte</label>
+            <p class="mg-b-20 mg-sm-b-40">Hier sind alle Standorte in der Nähe.</p>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="list-group list-group-user">
+                        <?php
+
+                        $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+
+                        $sql = "select * from TBL_Locations";
+                        if ($result = $dblink->query($sql)) {
+                            while ($row = $result->fetch_row()) {
+                                print "<div class=\"list-group-item\">
+                                <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
+                                <div class=\"user-name-address\">
+                                <p>Standort von $row[1] </p>
+                                <span> $row[4] $row[3], Postleitzahl $row[2] </span>
+                                </div>
+                                <div class=\"user-btn-wrapper\">
+                                <a href=\"./e/l.php?lid=$row[0]\" class=\"btn btn-outline-light btn-icon\">
+                                <div class=\"tx-20\"><i class=\"icon ion-android-more-vertical\"></i></div>
+                                </a>
+                                </div>
+                                </div>";
+                            }
+
+                        } else {
+                            print "SQL scheint falsch zu sein";
+                        }
 
                         ?>
 
@@ -196,21 +275,22 @@
                     </div><!-- list-group -->
                 </div><!-- col-6 -->
             </div><!-- section-wrapper -->
+        </div>
 
-            <div class="slim-footer mg-t-0">
-                <div class="container-fluid">
-                    <p>Copyright 2020 &copy; Regio Projekt DB2</p>
-                    <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
-                </div><!-- container-fluid -->
-            </div><!-- slim-footer -->
-        </div><!-- slim-mainpanel -->
-    </div><!-- slim-body -->
+        <div class="slim-footer mg-t-0">
+            <div class="container-fluid">
+                <p>Copyright 2020 &copy; Regio Projekt DB2</p>
+                <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
+            </div><!-- container-fluid -->
+        </div><!-- slim-footer -->
+    </div><!-- slim-mainpanel -->
+</div><!-- slim-body -->
 
-    <script src="../lib/jquery/js/jquery.js"></script>
-    <script src="../lib/popper.js/js/popper.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.js"></script>
-    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
-    <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="../lib/jquery/js/jquery.js"></script>
+<script src="../lib/popper.js/js/popper.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+<script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 
 </body>
 </html>
