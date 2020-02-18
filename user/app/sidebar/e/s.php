@@ -29,7 +29,7 @@ $nicknamemail = $dblink->query($db);
     <meta name="description" content="Regio Karte">
     <meta name="author" content="TorbenHammes">
 
-    <title>Produktansicht <?php print_r($pname); ?> | Regio Karte</title>
+    <title>Verkäuferansicht <?php print_r($pname); ?> | Regio Karte</title>
 
     <!-- vendor css -->
     <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -102,12 +102,12 @@ $nicknamemail = $dblink->query($db);
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Support</li>
                 </ol>
-                <h6 class="slim-pagetitle">Produktansicht</h6>
+                <h6 class="slim-pagetitle">Verkäuferansicht</h6>
             </div><!-- slim-pageheader -->
         </div>
         <div>
             <div class="section-wrapper">
-                <label class="section-title"><?php print_r($pname); ?></label>
+                <label class="section-title"><?php print_r($nickname); ?></label>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($nicknamemail); ?></p>
