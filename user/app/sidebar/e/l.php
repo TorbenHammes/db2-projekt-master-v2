@@ -1,5 +1,16 @@
 <?php
 $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+
+$lid = $_GET['l_id'];
+$sql = "select * from TBL_Locations where id=$lid";
+if ($result = $dblink->query($sql)) {
+    $row = $result->fetch_row();
+    $nickname = $row[1];
+    $plz = $row[2];
+    $hnr = $row[3];
+    $str = $row[4];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -83,7 +94,7 @@ $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projek
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Support</li>
           </ol>
-          <h6 class="slim-pagetitle">Standort von </h6>
+          <h6 class="slim-pagetitle">Standort von <?php echo $nickname;?></h6>
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper">
