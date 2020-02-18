@@ -1,8 +1,8 @@
 <?php
 $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
-$s = $_GET['s'];
-$sql = "select * from TBL_Verkaeufer where V_Nickname=$s";
+$v = $_GET['v'];
+$sql = "select * from TBL_Verkaeufer where V_Nickname=$v";
 if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
     $nickname = $row[0];
