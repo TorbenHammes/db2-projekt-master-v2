@@ -1,7 +1,7 @@
 <?php
 $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
-mysql_select_db("mydb");
-$result = mysql_query("SELECT id, name FROM mytable");
+mysqli_select_db("mydb");
+$result = mysqli_query("SELECT id, name FROM mytable");
 ?>
 <!DOCTYPE html>
 <html lang="de">
