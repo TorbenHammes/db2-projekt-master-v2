@@ -15,9 +15,9 @@ $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projek
     <title>Support | Regio Karte</title>
 
     <!-- vendor css -->
-    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="../lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../../lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
 
     <!-- Slim CSS -->
     <link rel="stylesheet" href="../css/slim.css">
@@ -190,11 +190,11 @@ $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projek
       </div><!-- slim-mainpanel -->
     </div><!-- slim-body -->
 
-    <script src="../lib/jquery/js/jquery.js"></script>
-    <script src="../lib/popper.js/js/popper.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.js"></script>
-    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
-    <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../lib/jquery/js/jquery.js"></script>
+    <script src="../../lib/popper.js/js/popper.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 
   </body>
 </html>
