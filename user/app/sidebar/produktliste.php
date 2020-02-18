@@ -104,7 +104,8 @@ or die('Error connecting to MySQL server.');
 
                         while (i < $result_count) {
 
-                            $prod = mysqli_query($db, "SELECT produktname FROM TBL_Ort WHERE (ROW_NUMBER() OVER (ORDER BY Ort)) = i")
+                            $prod = mysqli_query($db, "SELECT Ort FROM TBL_Ort WHERE (ROW_NUMBER() OVER (ORDER BY Ort)) = i");
+                            $plz = mysqli_query($db, "SELECT PLZ FROM TBL_Ort");
 
                       echo "<div class="list-group - item">";
                       echo "<img src="http://via.placeholder.com/500x500" alt="">";
@@ -112,7 +113,7 @@ or die('Error connecting to MySQL server.');
 
                       //echo "<div class="user-name-address">";
                       echo "<p>'$prod'</p>";
-                      echo "<span>Standort</span>";
+                      echo "<span>$plz</span>";
                       echo "</div>";
                       echo "<div class="user - btn - wrapper">";
                       echo "<a href="#" class="btn btn-outline-light btn-icon">";
