@@ -134,9 +134,11 @@ if ($result = $dblink->query($sql)) {
                                 accessToken: 'pk.eyJ1IjoiaGFtbWVzbWVkaWEiLCJhIjoiY2s2c2dwYWc4MGZlZjNubnZreTB5d3F3ZiJ9.ipG2uTSEaTRPNovKrJYRmQ'
                             }).addTo(mymap);
 
-                            var x='<?php echo $php_var;?>';
+                            var x='<?php print_r ($x); ?>';
+                            var y='<?php print_r ($y); ?>';
+                            var
 
-                            var marker = L.marker(<?php print_r ($x); ?>, , <?php print_r ($y); ?>]).addTo(mymap) ;?>);
+                            var marker = L.marker(<?php print_r ($x); ?>, , <?php print_r ($y); ?>]).addTo(mymap);
                         </script>
                     </div>
                 </div>
