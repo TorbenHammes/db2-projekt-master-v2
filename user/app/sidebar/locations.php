@@ -86,7 +86,7 @@
         <div class="section-wrapper mg-t-20">
             <label class="section-title">Karte</label>
             <p class="mg-b-20 mg-sm-b-40">Auf der Karte siehst du alle Standorte.</p>
-            <div>
+            <div class="row">
                 <div class="col">
                     <div id="leaflet-<?php print_r($lid); ?>" style="height=200px;"
                          class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
@@ -156,122 +156,6 @@
                         }
 
                         ?>
-                    </div><!-- list-group -->
-                </div><!-- col-6 -->
-            </div><!-- section-wrapper -->
-        </div>
-        <div class="section-wrapper mg-t-20">
-            <label class="section-title">Standorte</label>
-            <p class="mg-b-20 mg-sm-b-40">Hier sind alle Standorte in der Nähe.</p>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="list-group list-group-user">
-                        <?php
-
-                        $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
-
-                        $sql = "select * from TBL_Locations";
-                        if ($result = $dblink->query($sql)) {
-                            while ($row = $result->fetch_row()) {
-                                print "<div class=\"list-group-item\">
-                                <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
-                                <div class=\"user-name-address\">
-                                <p>Standort von $row[1] </p>
-                                <span> $row[4] $row[3], Postleitzahl $row[2] </span>
-                                </div>
-                                <div class=\"user-btn-wrapper\">
-                                <a href=\"./e/l.php?lid=$row[0]\" class=\"btn btn-outline-light btn-icon\">
-                                <div class=\"tx-20\"><i class=\"icon ion-android-more-vertical\"></i></div>
-                                </a>
-                                </div>
-                                </div>";
-                            }
-
-                        } else {
-                            print "SQL scheint falsch zu sein";
-                        }
-
-                        ?>
-
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 1</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 2</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 3</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 4</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Deborah Miner</p>
-                                <span>San Francisco, CA</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
                     </div><!-- list-group -->
                 </div><!-- col-6 -->
             </div><!-- section-wrapper -->
