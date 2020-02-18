@@ -100,7 +100,7 @@
                                 print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
                                 <div class=\"user-name-address\">
-                                <p>Kategorie von $row[1] </p>
+                                <p>$kategorie von $row[1] </p>
                                 <span> $row[4] $row[3] $row[2] </span>
                                 </div>
                                 <div class=\"user-btn-wrapper\">
@@ -112,6 +112,9 @@
                             }
 
                         } else {print "SQL scheint falsch zu sein";}
+
+                        $kategorie="select Art from TBL_Locations, TBL_Kategorie_Location where TBL_Locations.L_K_ID = TBL_Kategorie_Location.L_K_ID";
+                        
                         ?>
 
                         <div class="list-group-item">
