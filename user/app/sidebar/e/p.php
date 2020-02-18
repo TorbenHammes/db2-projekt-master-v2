@@ -2,7 +2,7 @@
 $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
 $pid = $_GET['pid'];
-$sql = "select * from TBL_Verkaeufer_Produkt where p_id=$pid";
+$sql = "select * from TBL_Verkaeufer_Produkt where P_ID=$pid";
 if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
     $nickname = $row[1];
