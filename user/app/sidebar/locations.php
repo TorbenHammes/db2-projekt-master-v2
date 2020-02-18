@@ -94,16 +94,14 @@
 
                         $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
-                        $kategorie="select Art from TBL_Kategorie_Location, TBL_Locations where TBL_Kategorie_Location.L_K_ID = TBL_Locations.L_K_ID";
-
                         $sql="select * from TBL_Locations";
-                        if ($result= $dblink->query($sql) AND $cat= $dblink->query($kategorie)) {
-                            while ($row=$result->fetch_row() AND $c=$cat->fetch_array(resource: $kategorie)) {
+                        if ($result= $dblink->query($sql)) {
+                            while ($row=$result->fetch_row()) {
                                 print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
                                 <div class=\"user-name-address\">
-                                <p>$c von $row[1] </p>
-                                <span> $row[4] $row[3] $row[2] </span>
+                                <p>Standort von $row[1] </p>
+                                <span> $row[4] $row[3], Postleitzahl $row[2] </span>
                                 </div>
                                 <div class=\"user-btn-wrapper\">
                                 <a href=\"#\" class=\"btn btn-outline-light btn-icon\">
