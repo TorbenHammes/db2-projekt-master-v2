@@ -144,7 +144,7 @@ if ($result = $dblink->query($sql)) {
     </div>
 
     <div class="section-wrapper">
-      <label class="section-title">FAQ</label>
+      <label class="section-title"><?php print_r ($plz) ;?></label>
       <p class="mg-b-20 mg-sm-b-40">Typische Fragen und Antworten.</p>
 
       <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
