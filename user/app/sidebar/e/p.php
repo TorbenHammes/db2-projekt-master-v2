@@ -114,10 +114,11 @@ $preisf = number_format($preis, 2, ',', ' ');
                         <h5 class="card-title tx-dark tx-medium mg-b-10"><?php printf($preisf); ?></h5>
                         <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
                         <hr>
-                            <button class="btn btn-outline-primary btn-block mg-b-10" onclick=“window.location.href=‘<?php printf($nickname); ?>‘ “>
-                                <h5 class="card-title tx-dark tx-medium mg-b-10"><?php print_r($nickname); ?></h5>
-                                <p class="card-subtitle tx-normal mg-b-15">Verkäufer</p>
+                        <a href="./s.php?v=<?php print_r($nickname); ?>">
+                            <button class="btn btn-outline-primary btn-block mg-b-10" type="button" onclick=“window.location.href=‘<?php printf($nickname); ?>‘ “>
+                                <h5 class="card-title tx-dark tx-medium mg-b-10">Verkäufer: <?php print_r($nickname); ?></h5>
                             </button>
+                        </a>
                     </div><!-- col -->
                     <div class="col-sm-12 col-md-6 container-fluid">
                         <img src="<?php print_r($bild); ?>" class="img-fluid" alt="Produktbild">
