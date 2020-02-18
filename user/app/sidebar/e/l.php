@@ -2,7 +2,7 @@
 $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
 $lid = $_GET['lid'];
-$sql = "select * from TBL_Locations where id=$lid";
+$sql = "select * from TBL_Locations where l_id=$lid";
 if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
     $nickname = $row[1];
