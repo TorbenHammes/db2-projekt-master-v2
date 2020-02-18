@@ -5,7 +5,6 @@ $v = $_GET['v'];
 $sql = "select * from TBL_Verkaeufer where V_Nickname=$v";
 if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
-    $nickname = $row[0];
     $vname = $row[1];
     $nname = $row[2];
     $plz = $row[3];
@@ -29,7 +28,7 @@ if ($result = $dblink->query($sql)) {
     <meta name="description" content="Regio Karte">
     <meta name="author" content="TorbenHammes">
 
-    <title>Verkäuferansicht <?php print_r($pname); ?> | Regio Karte</title>
+    <title>Verkäuferansicht <?php print_r($v); ?> | Regio Karte</title>
 
     <!-- vendor css -->
     <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -107,11 +106,11 @@ if ($result = $dblink->query($sql)) {
         </div>
         <div>
             <div class="section-wrapper">
-                <label class="section-title"><?php print_r($nickname); ?></label>
+                <label class="section-title"><?php print_r($v); ?></label>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($nicknamemail); ?></p>
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($nickname); ?></p>
+                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($v); ?></p>
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($strasse); ?></p>
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($vname); ?></p>
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($nname); ?></p>
@@ -120,9 +119,9 @@ if ($result = $dblink->query($sql)) {
                         <h5 class="card-title tx-dark tx-medium mg-b-10"><?php printf($preisf); ?></h5>
                         <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
                         <hr>
-                        <a href="./s.php?vnn=<?php printf($nickname); ?>">
+                        <a href="./s.php?vnn=<?php printf($v); ?>">
                             <button class="btn btn-outline-primary btn-block mg-b-10">
-                                <h5 class="card-title tx-dark tx-medium mg-b-10"><a href=""><? print_r($nickname); ?></a></h5>
+                                <h5 class="card-title tx-dark tx-medium mg-b-10"><a href=""><? print_r($v); ?></a></h5>
                                 <p class="card-subtitle tx-normal mg-b-15">Verkäufer</p>
                             </button>
                         </a>
