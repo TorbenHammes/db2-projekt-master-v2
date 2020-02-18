@@ -1,7 +1,16 @@
 <?php
 $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
-mysqli_select_db("mydb");
-$result = mysqli_query("SELECT id, name FROM mytable");
+
+$pid = $_GET['pid'];
+$sql = "select * from TBL_Verkaeufer_Produkt where p_id=$pid";
+if ($result = $dblink->query($sql)) {
+    $row = $result->fetch_row();
+    $nickname = $row[1];
+    $pname = $row[2];
+    $preis = $row[3];
+    $bild = $row[5];
+    $beschr = $row[6];
+}
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -85,7 +94,7 @@ $result = mysqli_query("SELECT id, name FROM mytable");
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Support</li>
           </ol>
-          <h6 class="slim-pagetitle">Produkt <</h6>
+          <h6 class="slim-pagetitle">Produkt <?php print_r ($pname) ;?></h6>
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper">
