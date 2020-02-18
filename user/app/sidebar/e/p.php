@@ -23,7 +23,7 @@ if ($result = $dblink->query($sql)) {
     <meta name="description" content="Regio Karte">
     <meta name="author" content="TorbenHammes">
 
-    <title>Support | Regio Karte</title>
+    <title>Produktansicht <?php print_r ($pname) ;?> | Regio Karte</title>
 
     <!-- vendor css -->
     <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -64,57 +64,55 @@ if ($result = $dblink->query($sql)) {
 </div><!-- slim-header -->
 
 <div class="slim-body">
-        <div class="slim-sidebar">
-            <label class="sidebar-label">Navigation</label>
+    <div class="slim-sidebar">
+        <label class="sidebar-label">Navigation</label>
 
-            <ul class="nav nav-sidebar">
-                <li class="sidebar-nav-item">
-                    <a href="../index.html" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
-                <li class="sidebar-nav-item">
-                    <a href="../map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i>
-                        Karte</a>
-                </li>
-                <li class="sidebar-nav-item">
-                    <a href="../settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i>
-                        Einstellungen</a>
-                </li>
-                <li class="sidebar-nav-item">
-                    <a href="../favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i>
-                        Favoriten</a>
-                </li>
-                <li class="sidebar-nav-item">
-                    <a href="../support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i>
-                        Support</a>
-                </li>
-            </ul>
-        </div><!-- slim-sidebar -->
+        <ul class="nav nav-sidebar">
+            <li class="sidebar-nav-item">
+                <a href="../index.html" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
+            <li class="sidebar-nav-item">
+                <a href="../map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i>
+                    Karte</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="../settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i>
+                    Einstellungen</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="../favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i>
+                    Favoriten</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="../support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i>
+                    Support</a>
+            </li>
+        </ul>
+    </div><!-- slim-sidebar -->
 
-        <!--Haupt Content-->
+    <div class="slim-mainpanel">
+        <div class="container">
+            <div class="slim-pageheader">
+                <ol class="breadcrumb slim-breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Support</li>
+                </ol>
+                <h6 class="slim-pagetitle">Produktansicht</h6>
+            </div><!-- slim-pageheader -->
 
-        <div class="slim-mainpanel">
-            <div class="container">
-                <div class="slim-pageheader">
-                    <ol class="breadcrumb slim-breadcrumb">
-                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Support</li>
-                    </ol>
-                    <h6 class="slim-pagetitle">Produktansicht</h6>
-                </div><!-- slim-pageheader -->
-
-            </div>
-            <div>
-                <div class="section-wrapper">
-                    <label class="section-title"><?php print_r($pname); ?></label>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <img src="../img/img0.jpg" class="img-fluid" alt="">
-                        </div><!-- col -->
-                        <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
-                            <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
-                        </div><!-- col -->
-                    </div><!-- row -->
-                </div><!-- section-wrapper -->
-            </div>
+        </div>
+        <div>
+            <div class="section-wrapper">
+                <label class="section-title"><?php print_r($pname); ?></label>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <img src="../img/img0.jpg" class="img-fluid" alt="">
+                    </div><!-- col -->
+                    <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
+                        <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div><!-- section-wrapper -->
+        </div>
 
 
         <!--END Haupt Content-->
