@@ -104,7 +104,7 @@
                                 <span> $row[4] $row[3], Postleitzahl $row[2] </span>
                                 </div>
                                 <div class=\"user-btn-wrapper\">
-                                <a href=\"#\" class=\"btn btn-outline-light btn-icon\">
+                                <a href=\"./e/l.php/l_id=$row[0]\" class=\"btn btn-outline-light btn-icon\">
                                 <div class=\"tx-20\"><i class=\"icon ion-android-more-vertical\"></i></div>
                                 </a>
                                 </div>
