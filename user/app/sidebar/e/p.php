@@ -98,17 +98,16 @@ if ($result = $dblink->query($sql)) {
                 </ol>
                 <h6 class="slim-pagetitle">Produktansicht</h6>
             </div><!-- slim-pageheader -->
-
         </div>
         <div>
             <div class="section-wrapper">
                 <label class="section-title"><?php print_r($pname); ?></label>
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
-                        <img src="../img/img0.jpg" class="img-fluid" alt="">
+                        <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
                     </div><!-- col -->
-                    <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
-                        <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
+                    <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
+                        <p class="mg-b-20 mg-sm-b-40"><?php print_r ($beschr) ;?></p>
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- section-wrapper -->
