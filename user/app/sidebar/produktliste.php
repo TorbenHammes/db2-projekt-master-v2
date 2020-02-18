@@ -100,15 +100,15 @@
                                 print '<div class="list-group-item">
                                 <img src="http://via.placeholder.com/500x500" alt="">
                                 <div class="user-name-address">
-                                <p> $row[3] </p>
-                                <span> $row[5] </span>
+                                <p> . $row['Produktname'] . </p>
+                                <span> . $row['Kategorie'] . </span>
                                 </div>
                                 <div class="user-btn-wrapper">
                                 <a href="#" class="btn btn-outline-light btn-icon">
                                 <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
                                 </a>
                                 </div>
-                                </div>\n';
+                                </div>';
                             }
 
                         } else {print "SQL scheint falsch zu sein";}
