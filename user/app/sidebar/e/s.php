@@ -1,20 +1,31 @@
 <?php
 $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
 
-$pid = $_GET['pid'];
-$sql = "select * from TBL_Verkaeufer_Produkt where P_ID=$pid";
+$s = $_GET['s'];
+$sql = "select * from TBL_Verkaeufer where V_Nickname=$s";
 if ($result = $dblink->query($sql)) {
     $row = $result->fetch_row();
-    $nickname = $row[1];
-    $pname = $row[2];
-    $preis = $row[3];
-    $bild = $row[5];
-    $beschr = $row[6];
+    $nickname = $row[0];
+    $vname = $row[1];
+    $nname = $row[2];
+    $plz = $row[3];
+    $nr = $row[4];
+    $strasse = $row[5];
+    $tel = $row[6];
 };
 
-setlocale(LC_MONETARY, 'de_DE');
+$db = "select E-Mail from TBL_V_Zugang, TBL_Verkaufer where TBL_V_Zugang.Nickname = TBL_Verkaufer.Nickname = $nickname";
+if ($result = $dblink->query($db)) {
+    $row = $result->fetch_row();
+    $nickname = $row[0];
+    $vname = $row[1];
+    $nname = $row[2];
+    $plz = $row[3];
+    $nr = $row[4];
+    $strasse = $row[5];
+    $tel = $row[6];
+};
 
-$preisf = number_format($preis, 2, ',', ' ');
 
 ?>
 <!DOCTYPE html>
