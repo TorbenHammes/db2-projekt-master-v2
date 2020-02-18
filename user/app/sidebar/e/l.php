@@ -9,6 +9,8 @@ if ($result = $dblink->query($sql)) {
     $plz = $row[2];
     $hnr = $row[3];
     $str = $row[4];
+    $x = $row[5];
+    $y = $row[6];
 }
 
 ?>
@@ -110,7 +112,7 @@ if ($result = $dblink->query($sql)) {
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Support</li>
                 </ol>
-                <h6 class="slim-pagetitle">Produktansicht</h6>
+                <h6 class="slim-pagetitle">Standortansicht</h6>
             </div><!-- slim-pageheader -->
         </div>
         <div>
@@ -121,7 +123,7 @@ if ($result = $dblink->query($sql)) {
                     <div class="col">
                         <div id="leaflet-<?php print_r ($plz) ;?>" style="height=200px;" class="ht-250 ht-sm-300 ht-md-400 bd bg-gray-100"></div>
                         <script>
-                            var mymap = L.map('leaflet-<?php print_r ($plz) ;?>').setView([51.505, -0.09], 13);
+                            var mymap = L.map('leaflet-<?php print_r ($plz) ;?>').setView([<?php print_r ($x); ?>, <?php print_r ($y); ?>], 13);
 
                             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
