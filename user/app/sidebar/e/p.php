@@ -26,7 +26,7 @@ setlocale(LC_MONETARY, 'de_DE');
     <meta name="description" content="Regio Karte">
     <meta name="author" content="TorbenHammes">
 
-    <title>Produktansicht <?php print_r ($pname) ;?> | Regio Karte</title>
+    <title>Produktansicht <?php print_r($pname); ?> | Regio Karte</title>
 
     <!-- vendor css -->
     <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -107,26 +107,23 @@ setlocale(LC_MONETARY, 'de_DE');
                 <label class="section-title"><?php print_r($pname); ?></label>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
-                        <p class="mg-b-20 mg-sm-b-40"><?php print_r ($beschr) ;?></p>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title tx-dark tx-medium mg-b-10"><?  print($preis) ;?></h5>
-                                    <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
-                                </div>
-                            </div><!-- card -->
-                        </div>
-                        <div class="col-sm-6 col-md-3 container-fluid">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title tx-dark tx-medium mg-b-10"><a href=""><?  print_r($nickname) ;?></a></h5>
-                                    <p class="card-subtitle tx-normal mg-b-15">Verkäufer</p>
-                                </div>
-                            </div><!-- card -->
-                        </div>
+                        <p class="mg-b-20 mg-sm-b-40"><?php print_r($beschr); ?></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title tx-dark tx-medium mg-b-10"><? print($preis); ?></h5>
+                                <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
+                            </div>
+                        </div><!-- card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title tx-dark tx-medium mg-b-10"><a
+                                            href=""><? print_r($nickname); ?></a></h5>
+                                <p class="card-subtitle tx-normal mg-b-15">Verkäufer</p>
+                            </div>
+                        </div><!-- card -->
                     </div><!-- col -->
                     <div class="col-sm-12 col-md-6 container-fluid">
-                        <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
+                        <img src="<?php print_r($bild); ?>" class="img-fluid" alt="Produktbild">
                     </div><!-- col -->
                 </div><!-- row -->
             </div><!-- section-wrapper -->
