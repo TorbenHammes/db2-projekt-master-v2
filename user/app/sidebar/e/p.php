@@ -94,98 +94,21 @@ if ($result = $dblink->query($sql)) {
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Support</li>
           </ol>
-          <h6 class="slim-pagetitle">Produkt <?php print_r ($pname) ;?></h6>
+          <h6 class="slim-pagetitle">Produktansicht</h6>
         </div><!-- slim-pageheader -->
 
-        <div class="section-wrapper">
-          <label class="section-title">Du hast Fragen?</label>
-          <p class="mg-b-20 mg-sm-b-40">Hier ist der richtige Ort, dich zu informieren.</p>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-        </div><!-- section-wrapper -->
-
-        <div class="section-wrapper">
-          <label class="section-title">Kontakt</label>
-          <p class="mg-b-20 mg-sm-b-40">Stell deine Frage direkt an uns über dieses Formular.</p>
-
-          <div class="form-layout">
-            <div class="row mg-b-25">
-              <div class="col-lg-4">
-                <div class="form-group">
-                  <label class="form-control-label">Vorname: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="vorname" value="" placeholder="Vornamen eingeben">
-                </div>
-              </div><!-- col-4 -->
-              <div class="col-lg-4">
-                <div class="form-group">
-                  <label class="form-control-label">Nachname: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nachname" value="" placeholder="Nachnamen eingeben">
-                </div>
-              </div><!-- col-4 -->
-              <div class="col-lg-4">
-                <div class="form-group">
-                  <label class="form-control-label">Email: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="email" value="" placeholder="Email eingeben">
-                </div>
-              </div><!-- col-4 -->
-              <div class="col-lg-12">
-                <label class=" form-control-label">Nachricht: <span class="tx-danger">*</span></label>
-                  <textarea rows="2" class="form-control" placeholder="Nachricht eingeben"></textarea>
-              </div><!-- col-4 -->
-            </div><!-- row -->
-
-            <div class="form-layout-footer">
-              <button class="btn btn-primary bd-0">Nachricht senden</button>
-              <button class="btn btn-secondary bd-0">Abbrechen</button>
-            </div><!-- form-layout-footer -->
-          </div><!-- form-layout -->
-        </div><!-- section-wrapper -->
-
     </div>
-
-    <div class="section-wrapper">
-      <label class="section-title">FAQ</label>
-      <p class="mg-b-20 mg-sm-b-40">Typische Fragen und Antworten.</p>
-
-      <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
-        <div class="card">
-          <div class="card-header" role="tab" id="headingOne">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="tx-gray-800 transition">
-              Frage 1
-            </a>
-          </div><!-- card-header -->
-
-          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingTwo">
-            <a class="collapsed tx-gray-800 transition" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Frage 2
-            </a>
-          </div>
-          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingThree">
-            <a class="collapsed tx-gray-800 transition" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Frage 3
-            </a>
-          </div>
-          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            </div>
-          </div><!-- collapse -->
-        </div><!-- card -->
-      </div><!-- accordion -->
+        <div class="section-wrapper">
+            <label class="section-title"><?php print_r ($pname) ;?></label>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <img src="../img/img0.jpg" class="img-fluid" alt="">
+                </div><!-- col -->
+                <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
+                    <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
+                </div><!-- col -->
+            </div><!-- row -->
+        </div><!-- section-wrapper -->
 
       </div>
     
