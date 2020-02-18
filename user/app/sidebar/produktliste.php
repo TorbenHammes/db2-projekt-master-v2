@@ -115,7 +115,7 @@ or die('Error connecting to MySQL server.');
                         mysqli_query($db, $query1) or die('Error querying database.');
 
 
-                        $result = mysqli_query($db, $query);
+                        $result = mysqli_query($db, $query1);
                         $row = mysqli_fetch_array($result);
 
                         while ($row = mysqli_fetch_array($result)) {
@@ -123,6 +123,24 @@ or die('Error connecting to MySQL server.');
                         }
                         ?>
 
+                        <?php
+
+                        $sql = "SELECT * FROM TBL_Verkäufer_Produkt";
+                        foreach ($db->query($sql) as $row) {
+                            echo '<div class=\"list-group-item\">';
+                            echo '<img src="http://via.placeholder.com/500x500" alt="">'
+                            echo '<div class="user-name-address">';
+                            echo '<p>'.$row['Produktname'].'</p>';
+                            echo '<span>'.$row['Kategorie'].'</span>';
+                            echo '</div>';
+                            echo '<div class="user-btn-wrapper">';
+                            echo '<a href="#" class="btn btn-outline-light btn-icon">';
+                            echo '<div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>';
+                            echo '</a>';
+                            echo '</div>';
+                            echo '</div><!-- list-group-item -->';
+                        }
+                        ?>
 
                       <div class="user-name-address">
                       <p><?=$prod?></p>
