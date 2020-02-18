@@ -105,10 +105,23 @@ or die('Error connecting to MySQL server.');
                         while (i < $result_count) {
 
                             $prod = mysqli_query($db, "SELECT Ort FROM TBL_Ort WHERE (ROW_NUMBER() OVER (ORDER BY Ort)) = i");
-                            $plz = mysqli_query($db, "SELECT PLZ FROM TBL_Ort");
+                            $plz = mysqli_query($db, "SELECT PLZ FROM TBL_Ort");}
 
-                      echo "<div class="list-group - item">";
-                      echo "<img src="http://via.placeholder.com/500x500" alt="">";?>
+                      echo '<div class="list-group - item">';
+                      echo '<img src="http://via.placeholder.com/500x500" alt="">';?>
+
+                        <?php
+                        $query1 = "SELECT * FROM TBL_Ort";
+                        mysqli_query($db, $query1) or die('Error querying database.');
+
+
+                        $result = mysqli_query($db, $query);
+                        $row = mysqli_fetch_array($result);
+
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo $row['PLZ'] . ' ' . $row['Ort'] .'<br />';
+                        }
+                        ?>
 
 
                       <div class="user-name-address">
