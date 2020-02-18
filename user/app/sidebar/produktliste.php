@@ -97,11 +97,11 @@
                         $sql="select * from TBL_Verkaeufer_Produkt";
                         if ($result= $dblink->query($sql)) {
                             while ($row=$result->fetch_row()) {
-                                print "<div class="list-group-item">
+                                print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
                                 <div class=\"user-name-address\">
-                                <p> . $row['Produktname'] . </p>
-                                <span> . $row['Kategorie'] . </span>
+                                <p> $row['Produktname'] </p>
+                                <span> $row['Kategorie'] </span>
                                 </div>
                                 <div class=\"user-btn-wrapper\">
                                 <a href=\"#\" class=\"btn btn-outline-light btn-icon\">
