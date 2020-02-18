@@ -10,7 +10,9 @@ if ($result = $dblink->query($sql)) {
     $preis = $row[3];
     $bild = $row[5];
     $beschr = $row[6];
-}
+};
+
+setlocale(LC_MONETARY, 'de_DE');
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -105,16 +107,17 @@ if ($result = $dblink->query($sql)) {
                 <div class="row">
                     <div class="col-sm-12 col-md-6 mg-t-40 mg-sm-t-0">
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r ($beschr) ;?></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title tx-dark tx-medium mg-b-10"><? echo money_format('%.2n', $preis) . "\n";?></h5>
+                                <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
+                            </div>
+                        </div><!-- card -->
                     </div><!-- col -->
                     <div class="col-sm-12 col-md-6">
                         <img src="<?php print_r ($bild) ;?>" class="img-fluid" alt="">
                     </div><!-- col -->
                 </div><!-- row -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        
-                    </div>
-                </div>
             </div><!-- section-wrapper -->
         </div>
 
