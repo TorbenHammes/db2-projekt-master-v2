@@ -64,69 +64,68 @@ if ($result = $dblink->query($sql)) {
 </div><!-- slim-header -->
 
 <div class="slim-body">
-    <div class="slim-mainpanel">
-    <div class="slim-sidebar">
-        <label class="sidebar-label">Navigation</label>
+        <div class="slim-sidebar">
+            <label class="sidebar-label">Navigation</label>
 
-        <ul class="nav nav-sidebar">
-            <li class="sidebar-nav-item">
-                <a href="../index.html" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
-            <li class="sidebar-nav-item">
-                <a href="../map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
-            </li>
-            <li class="sidebar-nav-item">
-                <a href="../settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i>
-                    Einstellungen</a>
-            </li>
-            <li class="sidebar-nav-item">
-                <a href="../favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i>
-                    Favoriten</a>
-            </li>
-            <li class="sidebar-nav-item">
-                <a href="../support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i>
-                    Support</a>
-            </li>
-        </ul>
-    </div><!-- slim-sidebar -->
+            <ul class="nav nav-sidebar">
+                <li class="sidebar-nav-item">
+                    <a href="../index.html" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
+                <li class="sidebar-nav-item">
+                    <a href="../map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i>
+                        Karte</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="../settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i>
+                        Einstellungen</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="../favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i>
+                        Favoriten</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="../support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i>
+                        Support</a>
+                </li>
+            </ul>
+        </div><!-- slim-sidebar -->
 
-    <!--Haupt Content-->
+        <!--Haupt Content-->
 
-    <div class="slim-mainpanel">
-        <div class="container">
-            <div class="slim-pageheader">
-                <ol class="breadcrumb slim-breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Support</li>
-                </ol>
-                <h6 class="slim-pagetitle">Produktansicht</h6>
-            </div><!-- slim-pageheader -->
+        <div class="slim-mainpanel">
+            <div class="container">
+                <div class="slim-pageheader">
+                    <ol class="breadcrumb slim-breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Support</li>
+                    </ol>
+                    <h6 class="slim-pagetitle">Produktansicht</h6>
+                </div><!-- slim-pageheader -->
 
-        </div>
-        <div>
-            <div class="section-wrapper">
-                <label class="section-title"><?php print_r($pname); ?></label>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <img src="../img/img0.jpg" class="img-fluid" alt="">
-                    </div><!-- col -->
-                    <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
-                        <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
-                    </div><!-- col -->
-                </div><!-- row -->
-            </div><!-- section-wrapper -->
-        </div>
-    </div>
+            </div>
+            <div>
+                <div class="section-wrapper">
+                    <label class="section-title"><?php print_r($pname); ?></label>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <img src="../img/img0.jpg" class="img-fluid" alt="">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-3 mg-t-20 mg-sm-t-0">
+                            <p class="mg-b-20 mg-sm-b-40">A rounded, circle or thumbnail image.</p>
+                        </div><!-- col -->
+                    </div><!-- row -->
+                </div><!-- section-wrapper -->
+            </div>
 
 
-    <!--END Haupt Content-->
+        <!--END Haupt Content-->
 
-    <div class="slim-footer mg-t-0">
-        <div class="container-fluid">
-            <p>Copyright 2020 &copy; Regio Projekt DB2</p>
-            <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
-        </div><!-- container-fluid -->
-    </div><!-- slim-footer -->
-</div><!-- slim-mainpanel -->
+        <div class="slim-footer mg-t-0">
+            <div class="container-fluid">
+                <p>Copyright 2020 &copy; Regio Projekt DB2</p>
+                <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
+            </div><!-- container-fluid -->
+        </div><!-- slim-footer -->
+    </div><!-- slim-mainpanel -->
 </div><!-- slim-body -->
 
 <script src="../lib/jquery/js/jquery.js"></script>
