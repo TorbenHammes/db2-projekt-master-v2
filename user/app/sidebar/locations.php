@@ -98,7 +98,7 @@
 
                         $sql="select * from TBL_Locations";
                         if ($result= $dblink->query($sql) AND $cat= $dblink->query($kategorie)) {
-                            while ($row=$result->fetch_row() AND $c=$cat->fetch_all()) {
+                            while ($row=$result->fetch_row() AND $c=$cat->fetch_field('Art')) {
                                 print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
                                 <div class=\"user-name-address\">
