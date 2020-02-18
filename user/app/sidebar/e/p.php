@@ -112,7 +112,7 @@ $preisf = number_format($preis, 2, ',', ' ');
                         <p class="mg-b-20 mg-sm-b-40"><?php print_r($beschr); ?></p>
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title tx-dark tx-medium mg-b-10"><? printf($preisf); ?></h5>
+                                <h5 class="card-title tx-dark tx-medium mg-b-10"><?php printf($preisf); ?></h5>
                                 <p class="card-subtitle tx-normal mg-b-15">Preis in &euro;</p>
                             </div>
                         </div><!-- card -->
