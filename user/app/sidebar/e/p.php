@@ -64,7 +64,7 @@ if ($result = $dblink->query($sql)) {
 </div><!-- slim-header -->
 
 <div class="slim-body">
-    <div class="slim-mainpanel"
+    <div class="slim-mainpanel">
     <div class="slim-sidebar">
         <label class="sidebar-label">Navigation</label>
 
