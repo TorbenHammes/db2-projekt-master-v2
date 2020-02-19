@@ -110,91 +110,26 @@
 
                         } else {print "SQL scheint falsch zu sein";}
                         ?>
-
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 1</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 2</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 3</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Produkt 4</p>
-                                <span>Standort</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
-                        <div class="list-group-item">
-                            <img src="http://via.placeholder.com/500x500" alt="">
-                            <div class="user-name-address">
-                                <p>Deborah Miner</p>
-                                <span>San Francisco, CA</span>
-                            </div>
-                            <div class="user-btn-wrapper">
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-chat"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-remove"></i></div>
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-icon">
-                                    <div class="tx-20"><i class="icon ion-android-more-vertical"></i></div>
-                                </a>
-                            </div>
-                        </div><!-- list-group-item -->
                     </div><!-- list-group -->
                 </div><!-- col-6 -->
             </div><!-- section-wrapper -->
+        </div><!-- container -->
 
+        <div class="slim-footer mg-t-0">
+            <div class="container-fluid">
+                <p>Copyright 2018 &copy; All Rights Reserved. Slim Dashboard Template</p>
+                <p>Designed by: <a href="">ThemePixels</a></p>
+            </div><!-- container-fluid -->
+        </div><!-- slim-footer -->
+    </div><!-- slim-mainpanel -->
+</div><!-- slim-body -->
 
-            <?php
-            include footer();
-            print footer();
-            ?>
+<script src="../lib/jquery/js/jquery.js"></script>
+<script src="../lib/popper.js/js/popper.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+<script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+
+<script src="../js/slim.js"></script>
+</body>
+</html>
