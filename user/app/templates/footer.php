@@ -5,8 +5,8 @@ function footer() {
 
         <div class="slim-footer mg-t-0">
           <div class="container-fluid">
-            <p>Copyright 2018 &copy; All Rights Reserved. Slim Dashboard Template</p>
-            <p>Designed by: <a href="">ThemePixels</a></p>
+            <p>Copyright 2020 &copy; Regio Projekt DB2</p>
+            <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
           </div><!-- container-fluid -->
         </div><!-- slim-footer -->
       </div><!-- slim-mainpanel -->
@@ -18,7 +18,6 @@ function footer() {
     <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
     <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 
-    <script src="../js/slim.js"></script>
   </body>
 </html>
     '

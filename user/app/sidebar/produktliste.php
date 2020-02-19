@@ -19,6 +19,9 @@
     <!-- Slim CSS -->
     <link rel="stylesheet" href="../css/slim.css">
 
+    <!--Ion Icons-->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
 </head>
 <body>
 
@@ -57,7 +60,10 @@
             <li class="sidebar-nav-item">
                 <a href="index.php" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
             <li class="sidebar-nav-item">
-                <a href="map.html" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
+                <a href="map.php" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="produktliste.php" class="sidebar-nav-link"><ion-icon name="albums-outline"></ion-icon> Produkte</a>
             </li>
             <li class="sidebar-nav-item">
                 <a href="settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Einstellungen</a>
@@ -121,8 +127,8 @@
 
         <div class="slim-footer mg-t-0">
             <div class="container-fluid">
-                <p>Copyright 2018 &copy; All Rights Reserved. Slim Dashboard Template</p>
-                <p>Designed by: <a href="">ThemePixels</a></p>
+                <p>Copyright 2020 &copy; Regio Projekt DB2</p>
+                <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
             </div><!-- container-fluid -->
         </div><!-- slim-footer -->
     </div><!-- slim-mainpanel -->
@@ -134,6 +140,5 @@
 <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
 <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 
-<script src="../js/slim.js"></script>
 </body>
 </html>
