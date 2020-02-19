@@ -194,4 +194,7 @@
             </div><!-- section-wrapper -->
 
 
-            <?php print footer()?>
+            <?php
+            include footer();
+            print footer();
+            ?>
