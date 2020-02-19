@@ -45,7 +45,7 @@
 
         <button class="btn btn-primary btn-block btn-signin">Registrieren</button>
 
-        <p class="mg-t-40 mg-b-0">Du hast schon einen Account? <a href="login.html">Einloggen</a></p>
+        <p class="mg-t-40 mg-b-0">Du hast schon einen Account? <a href="login.php">Einloggen</a></p>
       </div><!-- signin-box -->
 
     </div><!-- signin-wrapper -->
