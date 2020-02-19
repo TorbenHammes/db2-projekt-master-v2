@@ -28,8 +28,9 @@
         <h2 class="slim-logo"><a href="index.php">logo<span>.</span></a></h2>
         <h2 class="signin-title-primary">Bis bald!</h2>
         <h3 class="signin-title-secondary">Wir freuen uns, bald wieder von dir zu hören.</h3>
-
+<a href="../website/index.html">
         <button class="btn btn-primary btn-block">Zurück zur Website</button>
+</a>
       </div>
     </div>
 

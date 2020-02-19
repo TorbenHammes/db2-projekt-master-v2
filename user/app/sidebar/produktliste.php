@@ -60,14 +60,13 @@
                 <a href="map.php" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="produktliste.php" class="sidebar-nav-link"><ion-icon name="albums-outline"></ion-icon> Produkte</a>
+                <a href="produktliste.php" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Produkte</a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="settings.html" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Einstellungen</a>
+                <a href="settings.php" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Einstellungen</a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i>
-                    Favoriten</a>
+                <a href="favoriten.html" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i> Favoriten</a>
             </li>
             <li class="sidebar-nav-item">
                 <a href="support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i> Support</a>

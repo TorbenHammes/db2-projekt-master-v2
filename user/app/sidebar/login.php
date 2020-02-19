@@ -36,7 +36,7 @@
             <input type="password" class="form-control" placeholder="Passwort eingeben">
         </div><!-- form-group -->
         <button class="btn btn-primary btn-block btn-signin">Einloggen</button>
-        <p class="mg-b-0">Du hast keinen Account? <a href="signup.html">Registrieren</a></p>
+        <p class="mg-b-0">Du hast keinen Account? <a href="signup.php">Registrieren</a></p>
     </div><!-- signin-box -->
 
 </div><!-- signin-wrapper -->
