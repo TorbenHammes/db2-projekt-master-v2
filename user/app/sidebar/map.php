@@ -136,7 +136,7 @@
                 <div class="list-group list-group-user">
                     <?php
 
-                    $dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+                    $dblink = new mysqli('localhost', 'hammes', 'mango', 'hammes');
 
                     $sql = "select * from TBL_Locations";
                     if ($result = $dblink->query($sql)) {

@@ -1,5 +1,5 @@
 <?php
-$dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+$dblink=new mysqli('localhost', 'hammes', 'mango', 'hammes');
 
 $nickname=strip_tags($_GET['nickname']);
 $pname=strip_tags($_GET['pname']);

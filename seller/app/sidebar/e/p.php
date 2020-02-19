@@ -1,5 +1,5 @@
 <?php
-$dblink = new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+$dblink = new mysqli('localhost', 'hammes', 'mango', 'hammes');
 
 $pid = $_GET['pid'];
 $sql = "select * from TBL_Verkaeufer_Produkt where P_ID=$pid";

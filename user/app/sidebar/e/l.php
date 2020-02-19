@@ -1,5 +1,5 @@
 <?php
-$dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
+$dblink=new mysqli('localhost', 'hammes', 'mango', 'hammes');
 
 $lid = $_GET['lid'];
 $sql = "select * from TBL_Locations where l_id=$lid";

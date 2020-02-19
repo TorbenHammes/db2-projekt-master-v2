@@ -1,6 +1,6 @@
 <?php
 //Step1
- $db = mysqli_connect('localhost','master-projekt-db2','Xj41t^h3','master-projekt-db2')
+ $db = mysqli_connect('localhost', 'hammes', 'mango', 'hammes')
  or die('Error connecting to MySQL server.');
 ?>
 
