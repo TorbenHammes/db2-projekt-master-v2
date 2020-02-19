@@ -85,7 +85,13 @@
         <div class="section-wrapper mg-t-20">
             <label class="section-title">Produkte</label>
             <p class="mg-b-20 mg-sm-b-40">All die Produkte deiner Region.</p>
-
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="./c/new-p.php" class="btn btn-outline-light btn-icon">
+                    <div class="tx-20">Neues Produkt anlegen</div>
+                    </a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="list-group list-group-user">
