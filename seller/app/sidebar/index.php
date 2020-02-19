@@ -1,3 +1,9 @@
+<?php
+//Step1
+ $db = mysqli_connect('localhost','master-projekt-db2','Xj41t^h3','master-projekt-db2')
+ or die('Error connecting to MySQL server.');
+?>
+
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -25,7 +31,7 @@
     <div class="slim-header with-sidebar">
       <div class="container-fluid">
         <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="index.html">Logo<span>.</span></a></h2>
+          <h2 class="slim-logo"><a href="index.php">Logo<span>.</span></a></h2>
           <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
           <div class="search-box">
             <input type="text" class="form-control" placeholder="Suche">
@@ -41,8 +47,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <nav class="nav">
-                <a href="#" class="nav-link"><i class="icon ion-compose"></i> Einstellungen</a>
-                <a href="#" class="nav-link"><i class="icon ion-forward"></i> Ausloggen</a>
+                <a href="settings.html" class="nav-link"><i class="icon ion-compose"></i> Einstellungen</a>
+                <a href="logout.html" class="nav-link"><i class="icon ion-forward"></i> Ausloggen</a>
               </nav>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->
@@ -55,24 +61,18 @@
 
         <ul class="nav nav-sidebar">
           <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
+            <a href="index.php" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
           <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Karte</a>
+            <a href="map.php" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Meine Orte</a>
+          </li>
+            <li class="sidebar-nav-item">
+                <a href="produktliste.php" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Produkte</a>
+            </li>
+          <li class="sidebar-nav-item">
+            <a href="settings.php" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Einstellungen</a>
           </li>
           <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon locate-outline"></i> Locations</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon file-tray-outline"></i> Produkte</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Einstellungen</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon ion-ios-lightbulb-outline"></i> Favoriten</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i> Support</a>
+            <a href="support.html" class="sidebar-nav-link"><i class="icon ion-ios-information-outline"></i> Support</a>
           </li>
         </ul>
       </div><!-- slim-sidebar -->
@@ -81,13 +81,28 @@
         <div class="container">
           <div class="slim-pageheader">
             <ol class="breadcrumb slim-breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Rohseite</li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             </ol>
-            <h6 class="slim-pagetitle">Rohseite</h6>
+            <h6 class="slim-pagetitle">Dashboard</h6>
           </div><!-- slim-pageheader -->
 
         </div><!-- container -->
+
+        <div><p>
+          <?php 
+            $query = "SELECT * FROM TBL_Ort";
+            mysqli_query($db, $query) or die('Error querying database.');
+            
+            
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_array($result);
+
+            while ($row = mysqli_fetch_array($result)) {
+            echo $row['PLZ'] . ' ' . $row['Ort'] .'<br />';
+}
+          ?>
+          </p>
+        </div>
 
         <div class="slim-footer mg-t-0">
           <div class="container-fluid">
@@ -104,6 +119,5 @@
     <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
     <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 
-    <script src="../js/slim.js"></script>
   </body>
 </html>
