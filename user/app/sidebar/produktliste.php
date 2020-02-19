@@ -91,11 +91,8 @@
                 <div class="col-lg-12">
                     <div class="list-group list-group-user">
                         <?php
-
-                        $dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
-
                         $sql="select * from TBL_Verkaeufer_Produkt";
-                        if ($result= $dblink->query($sql)) {
+                        if ($result= $dbconnect->query($sql)) {
                             while ($row=$result->fetch_row()) {
                                 print "<div class=\"list-group-item\">
                                 <img src=\"http://via.placeholder.com/500x500\" alt=\"\">
@@ -196,20 +193,5 @@
                 </div><!-- col-6 -->
             </div><!-- section-wrapper -->
 
-            <div class="slim-footer mg-t-0">
-                <div class="container-fluid">
-                    <p>Copyright 2020 &copy; Regio Projekt DB2</p>
-                    <p>GitHub <a href="https://github.com/TorbenHammes/">Torben Hammes</a></p>
-                </div><!-- container-fluid -->
-            </div><!-- slim-footer -->
-        </div><!-- slim-mainpanel -->
-    </div><!-- slim-body -->
 
-    <script src="../lib/jquery/js/jquery.js"></script>
-    <script src="../lib/popper.js/js/popper.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.js"></script>
-    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
-    <script src="../lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
-
-</body>
-</html>
+            <?php print footer()?>
