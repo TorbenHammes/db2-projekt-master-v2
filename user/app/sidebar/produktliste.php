@@ -19,9 +19,6 @@
     <!-- Slim CSS -->
     <link rel="stylesheet" href="../css/slim.css">
 
-    <!--Ion Icons-->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-
 </head>
 <body>
 
