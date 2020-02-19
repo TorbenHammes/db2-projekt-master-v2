@@ -57,7 +57,7 @@
             <li class="sidebar-nav-item">
                 <a href="index.php" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
             <li class="sidebar-nav-item">
-                <a href="map.php" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Meine Orte</a>
+                <a href="locations.php" class="sidebar-nav-link"><i class="icon ion-ios-location-outline"></i> Meine Orte</a>
             </li>
             <li class="sidebar-nav-item">
                 <a href="produktliste.php" class="sidebar-nav-link"><i class="icon ion-ios-gear-outline"></i> Produkte</a>
