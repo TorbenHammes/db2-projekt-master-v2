@@ -8,9 +8,8 @@ $kategorie=strip_tags($_GET['kategorie']);
 $bild=strip_tags($_GET['bild']);
 $beschreibung=strip_tags($_GET['beschr']);
 
-$pid
 
-$ins="insert into TBL_Verkäufer_Produkt (P_ID,V_Nickname,Produktname,Preis,Kategorie,Bild,Beschreibung) values('$pid','$nickname','$pname','$preis','$kategorie','$bild','$beschreibung')";
+$ins="insert into TBL_Verkäufer_Produkt (V_Nickname,Produktname,Preis,Kategorie,Bild,Beschreibung) values($nickname','$pname','$preis','$kategorie','$bild','$beschreibung')";
 
 $dblink->query($ins);
 
