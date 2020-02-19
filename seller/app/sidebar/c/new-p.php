@@ -1,19 +1,3 @@
-<?php
-$dblink=new mysqli('localhost', 'master-projekt-db2', 'Xj41t^h3', 'master-projekt-db2');
-
-$nickname=strip_tags($_GET['nickname']);
-$pname=strip_tags($_GET['pname']);
-$preis=strip_tags($_GET['preis']);
-$kategorie=strip_tags($_GET['kategorie']);
-$bild=strip_tags($_GET['bild']);
-$beschreibung=strip_tags($_GET['beschr']);
-
-
-$ins="insert into TBL_Verkäufer_Produkt (V_Nickname,Produktname,Preis,Kategorie,Bild,Beschreibung) values($nickname','$pname','$preis','$kategorie','$bild','$beschreibung')";
-
-$dblink->query($ins);
-
-?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -107,7 +91,7 @@ $dblink->query($ins);
                 <p class="mg-b-20 mg-sm-b-40">Hier kannst du ein neues Produkt hinzufügen.</p>
                 <div class="row">
                     <div class="col">
-                        <form method=GET>
+                        <form action="skript-new-p.php" method=GET>
                             Nickname:<br>
                             <input name=nickname><br>
                             Produktname:<br>
